@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: #054D48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button {
+  padding: 1rem 1.5rem ;
+  font-size: 1.3em;
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-focus {
+  background-color: #EDFF71;
+  color: #054D48;
+}
+
