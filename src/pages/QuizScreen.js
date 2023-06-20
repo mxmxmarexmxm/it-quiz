@@ -75,7 +75,7 @@ const QuizScreen = (props) => {
   return (
     <div className={classes.container}>
       {
-        <h2>
+        <h2 className={classes.title}>
           {currentQuestion + 1 + '. '}
           {props.questions[currentQuestion].question}
         </h2>
@@ -89,7 +89,7 @@ const QuizScreen = (props) => {
           />
         ))}
       </div>
-      <button onClick={nextHandler}>Next {'>'}</button>
+      <button onClick={nextHandler}>Next </button>
     </div>
   );
 };

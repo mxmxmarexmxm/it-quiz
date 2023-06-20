@@ -2,15 +2,7 @@ import { useState } from 'react';
 import Button from '../components/UI/Button';
 import classes from './ConfigureQuizScreen.module.css';
 
-const CATEGORIES = [
-  'Linux',
-  'Bash',
-  'Docker',
-  'SQL',
-  'CMS',
-  'Code',
-  'DevOps'
-];
+const CATEGORIES = ['Linux', 'Bash', 'Docker', 'SQL', 'CMS', 'Code', 'DevOps'];
 const DIFFICULTY = ['Easy', 'Medium', 'Hard'];
 const NUMBERS = [1, 5, 10, 15, 20];
 

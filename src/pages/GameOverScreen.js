@@ -6,7 +6,7 @@ const GameOverScreen = (props) => {
   const { correctAnswers, incorrectAnswers } = props;
 
   return (
-    <div>
+    <div className={classes.container}>
       <h1>
         Result: {correctAnswers.length} of {props.questions.length} (
         {(correctAnswers.length / props.questions.length) * 100}%)
@@ -20,8 +20,14 @@ const GameOverScreen = (props) => {
               <h2>
                 {answer.questionNumber}. {answer.question.question}
               </h2>
-              <h4> Your answer: {answer.question.answers[answer.userAnswer]}</h4>
-              <h4> Correct answer: {answer.question.answers[answer.correctAnswer]}</h4>
+              <h4>
+                {' '}
+                Your answer: {answer.question.answers[answer.userAnswer]}
+              </h4>
+              <h4>
+                {' '}
+                Correct answer: {answer.question.answers[answer.correctAnswer]}
+              </h4>
             </div>
           ))}
         </div>
@@ -35,13 +41,19 @@ const GameOverScreen = (props) => {
               <h2>
                 {answer.questionNumber}. {answer.question.question}
               </h2>
-              <h4> Your answer: {answer.question.answers[answer.userAnswer]}</h4>
-              <h4> Correct answer: {answer.question.answers[answer.correctAnswer]}</h4>
+              <h4>
+                {' '}
+                Your answer: {answer.question.answers[answer.userAnswer]}
+              </h4>
+              <h4>
+                {' '}
+                Correct answer: {answer.question.answers[answer.correctAnswer]}
+              </h4>
             </div>
           ))}
         </div>
       )}
-      <Button onClick={() => window.location.reload(false)} text='Try Again!' />
+      <Button onClick={() => window.location.reload(false)} text="Try Again!" />
     </div>
   );
 };

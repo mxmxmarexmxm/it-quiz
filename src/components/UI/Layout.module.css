@@ -1,10 +1,38 @@
-.container {
+.screen {
   min-height: 100vh;
-  width: 100%;
-  padding: 2rem;
-  margin: 0 auto;
+  width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #037171;
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 1rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/binary.png');
+  background-size: cover;
+  filter: grayscale(88%) blur(5px);
+  z-index: -1;
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    max-width: 700px;
+  }
+  .screen::before {
+    filter: grayscale(88%) blur(10px);
+  }
 }

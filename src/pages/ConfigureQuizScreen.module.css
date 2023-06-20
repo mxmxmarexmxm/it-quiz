@@ -1,11 +1,19 @@
 h1 {
   margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
 }
 
 .container {
-  background-color: #037676;
+  background-color: #0a0909;
   padding: 1.5rem;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
+  border: 1px solid rgb(210, 216, 210);
+  width: 100%;
+}
+
+.configBtn {
+  background-color: #262e2e;
 }

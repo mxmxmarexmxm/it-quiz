@@ -1,26 +1,29 @@
 .wrapper {
-  background-color: #054D48;
+  background-color: #475353;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
   cursor: pointer;
-  overflow: hidden;
 }
 
 .button {
-  padding: 1rem 1.5rem ;
+  padding: 1rem 1.5rem;
   font-size: 1.3em;
-  background-color: inherit;
+  background-color: #262e2e;
   width: 100%;
   border: none;
   color: white;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .button-focus {
-  background-color: #EDFF71;
-  color: #054D48;
+  background-color: rgb(221, 221, 221);
+  border: 4px solid rgb(87, 88, 87);
+  color: black;
 }
 
+.button:hover {
+  border: 1px solid rgb(210, 216, 210);
+}
