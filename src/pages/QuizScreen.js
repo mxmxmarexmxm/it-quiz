@@ -28,8 +28,6 @@ const QuizScreen = (props) => {
     setChosenAnswers(newAnswers);
   }
 
-  console.log(props.questions[currentQuestion]);
-
   const nextHandler = () => {
     let correctAnswersList = props.questions[currentQuestion].correct_answers;
     const userAnswer = chosenAnswers.join(', ');
@@ -86,12 +84,12 @@ const QuizScreen = (props) => {
         {answersValues.map((answer) => (
           <AnswerItem
             key={answer}
-            onClick={answersHandler.bind(this, answer)}
+            onClick={() => answersHandler(answer)}
             text={answer}
           />
         ))}
       </div>
-      <button onClick={nextHandler}>Next ></button>
+      <button onClick={nextHandler}>Next {'>'}</button>
     </div>
   );
 };

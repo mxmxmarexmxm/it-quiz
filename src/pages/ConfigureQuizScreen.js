@@ -1,8 +1,16 @@
 import { useState } from 'react';
 import Button from '../components/UI/Button';
-import classes from './ConfigureQuizScreen.module.css'
+import classes from './ConfigureQuizScreen.module.css';
 
-const CATEGORIES = ['Linux', 'Bash', 'Docker', 'SQL', 'CMS', 'Code', 'DevOps'];
+const CATEGORIES = [
+  'Linux',
+  'Bash',
+  'Docker',
+  'SQL',
+  'CMS',
+  'Code',
+  'DevOps'
+];
 const DIFFICULTY = ['Easy', 'Medium', 'Hard'];
 const NUMBERS = [1, 5, 10, 15, 20];
 
@@ -10,19 +18,6 @@ const ConfigureQuizScreen = (props) => {
   const [category, setCategory] = useState(null);
   const [difficulty, setDifficulty] = useState(null);
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
-
-  const setCategoryHandler = (category) => {
-    let selectedCategory = category.toLowerCase();
-    setCategory(selectedCategory);
-  };
-
-  const setDifficultyHandler = (dif) => {
-    setDifficulty(dif);
-  };
-
-  const setNumberOfQuestionsHandler = (num) => {
-    setNumberOfQuestions(num);
-  };
 
   if (numberOfQuestions) {
     let config = { category, difficulty, numberOfQuestions };
@@ -36,7 +31,7 @@ const ConfigureQuizScreen = (props) => {
           <h1>Choose topic:</h1>
           {CATEGORIES.map((category) => (
             <Button
-              onClick={setCategoryHandler.bind(this, category)}
+              onClick={() => setCategory(category)}
               key={category}
               text={category}
             />
@@ -47,11 +42,7 @@ const ConfigureQuizScreen = (props) => {
         <div>
           <h1>Choose difficulty:</h1>
           {DIFFICULTY.map((dif) => (
-            <Button
-              onClick={setDifficultyHandler.bind(this, dif)}
-              key={dif}
-              text={dif}
-            />
+            <Button onClick={() => setDifficulty(dif)} key={dif} text={dif} />
           ))}
         </div>
       )}
@@ -60,7 +51,7 @@ const ConfigureQuizScreen = (props) => {
           <h1>Choose number of questions:</h1>
           {NUMBERS.map((num) => (
             <Button
-              onClick={setNumberOfQuestionsHandler.bind(this, num)}
+              onClick={() => setNumberOfQuestions(num)}
               key={num}
               text={num}
             />
