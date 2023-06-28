@@ -16,6 +16,16 @@ const ConfigureQuizScreen = (props) => {
     props.onStartQuiz(config);
   }
 
+  const handleBack = () => {
+    if (difficulty) {
+      setDifficulty(null);
+      return;
+    }
+    if (category) {
+      setCategory(null);
+    }
+  };
+
   return (
     <div className={classes.container}>
       {!category && (
@@ -49,6 +59,11 @@ const ConfigureQuizScreen = (props) => {
             />
           ))}
         </div>
+      )}
+      {category && (
+        <button className={classes['back-btn']} onClick={handleBack}>
+          ←
+        </button>
       )}
     </div>
   );
