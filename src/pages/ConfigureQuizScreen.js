@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/UI/Button';
 import classes from './ConfigureQuizScreen.module.css';
+import { ReactComponent as BackIcon } from '../assets/img/icons/back-icon.svg';
 
 const CATEGORIES = ['Linux', 'Bash', 'Docker', 'SQL', 'CMS', 'Code', 'DevOps'];
 const DIFFICULTY = ['Easy', 'Medium', 'Hard'];
@@ -27,44 +28,46 @@ const ConfigureQuizScreen = (props) => {
   };
 
   return (
-    <div className={classes.container}>
-      {!category && (
-        <div>
-          <h1>Choose topic:</h1>
-          {CATEGORIES.map((category) => (
-            <Button
-              onClick={() => setCategory(category)}
-              key={category}
-              text={category}
-            />
-          ))}
-        </div>
-      )}
-      {category && !difficulty && (
-        <div>
-          <h1>Choose difficulty:</h1>
-          {DIFFICULTY.map((dif) => (
-            <Button onClick={() => setDifficulty(dif)} key={dif} text={dif} />
-          ))}
-        </div>
-      )}
-      {category && difficulty && (
-        <div>
-          <h1>Choose number of questions:</h1>
-          {NUMBERS.map((num) => (
-            <Button
-              onClick={() => setNumberOfQuestions(num)}
-              key={num}
-              text={num}
-            />
-          ))}
-        </div>
-      )}
-      {category && (
-        <button className={classes['back-btn']} onClick={handleBack}>
-          ←
-        </button>
-      )}
+    <div>
+      <div className={classes['top-nav']}>
+        {category && (
+          <BackIcon className={classes['back-icon']} onClick={handleBack} />
+        )}
+      </div>
+      <div className={classes.container}>
+        {!category && (
+          <div>
+            <h1 className={classes.title}>Choose topic:</h1>
+            {CATEGORIES.map((category) => (
+              <Button
+                onClick={() => setCategory(category)}
+                key={category}
+                text={category}
+              />
+            ))}
+          </div>
+        )}
+        {category && !difficulty && (
+          <div>
+            <h1 className={classes.title}>Choose difficulty:</h1>
+            {DIFFICULTY.map((dif) => (
+              <Button onClick={() => setDifficulty(dif)} key={dif} text={dif} />
+            ))}
+          </div>
+        )}
+        {category && difficulty && (
+          <div>
+            <h1 className={classes.title}>Choose number of questions:</h1>
+            {NUMBERS.map((num) => (
+              <Button
+                onClick={() => setNumberOfQuestions(num)}
+                key={num}
+                text={num}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
