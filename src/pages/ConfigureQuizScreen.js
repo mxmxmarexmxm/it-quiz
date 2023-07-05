@@ -31,7 +31,7 @@ const ConfigureQuizScreen = (props) => {
   const [category, setCategory] = useState(null);
   const [difficulty, setDifficulty] = useState(null);
   const [numberOfQuestions, setNumberOfQuestions] = useState(null);
-  const [background, setBackground] = useState(0);
+  const [background, setBackground] = useState(1);
   const [isBlured, setIsBlured] = useState(true);
   const screen = document.getElementById('screen');
 
