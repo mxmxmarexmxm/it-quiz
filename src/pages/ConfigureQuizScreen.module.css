@@ -5,11 +5,13 @@
 }
 
 .top-nav {
-  padding: 0.5rem 0 1rem 0.5rem;
+  padding: 0.5rem 1rem 1.2rem 1rem;
   margin-bottom: -1rem;
   border-radius: 15px 15px 0px 0px;
   background-color: #262e2e;
   border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
@@ -23,13 +25,18 @@
   position: relative;
 }
 
-.configBtn {
-  background-color: #262e2e;
+.top-nav-right {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.back-icon {
+.nav-icon {
   fill: white;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+}
+
+.configBtn {
+  background-color: #262e2e;
 }
