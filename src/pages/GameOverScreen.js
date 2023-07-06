@@ -3,19 +3,19 @@ import Button from '../components/UI/Button';
 import classes from './GameOverScreen.module.css';
 
 const GameOverScreen = (props) => {
-  const { correctAnswers, incorrectAnswers } = props;
+  const { trueAnswers, falseAnswers } = props;
 
   return (
     <div className={classes.container}>
       <h1>
-        Result: {correctAnswers.length} of {props.questions.length} (
-        {(correctAnswers.length / props.questions.length) * 100}%)
+        Result: {trueAnswers.length} of {props.questions.length} (
+        {(trueAnswers.length / props.questions.length) * 100}%)
       </h1>
 
-      {incorrectAnswers.length !== 0 && (
+      {falseAnswers.length !== 0 && (
         <div className={classes['answers-container']}>
-          <span className={classes['answers-title']}>Incorrect answers:</span>
-          {incorrectAnswers.map((answer) => (
+          <span className={classes['answers-title']}>False answers:</span>
+          {falseAnswers.map((answer) => (
             <div
               key={answer.question.id}
               className={classes['question-container']}
@@ -34,10 +34,10 @@ const GameOverScreen = (props) => {
         </div>
       )}
 
-      {correctAnswers.length !== 0 && (
+      {trueAnswers.length !== 0 && (
         <div className={classes['answers-container']}>
-          <span className={classes['answers-title']}>Correct answers:</span>
-          {correctAnswers.map((answer) => (
+          <span className={classes['answers-title']}>True answers:</span>
+          {trueAnswers.map((answer) => (
             <div
               key={answer.question.id}
               className={classes['question-container']}

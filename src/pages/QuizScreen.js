@@ -4,15 +4,16 @@ import { getObjKey } from '../utils/get-obj-keys';
 import GameOverScreen from './GameOverScreen';
 import classes from './QuizScreen.module.css';
 
-let correctAnswers = [];
-let incorrectAnswers = [];
+let trueAnswers = [];
+let falseAnswers = [];
 
 const QuizScreen = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [gameIsOver, setGameIsOver] = useState(false);
+  const { questions } = props;
 
-  let answersArray = props.questions[currentQuestion].answers;
+  let answersArray = questions[currentQuestion].answers;
   let answersValues = Object.values(answersArray).filter((v) => v !== null);
 
   function answersHandler(selectedAnswer) {
@@ -29,7 +30,7 @@ const QuizScreen = (props) => {
   }
 
   const nextHandler = () => {
-    let correctAnswersList = props.questions[currentQuestion].correct_answers;
+    let correctAnswersList = questions[currentQuestion].correct_answers;
     const userAnswer = chosenAnswers.join(', ');
     let correct_answer = '';
 
@@ -40,21 +41,21 @@ const QuizScreen = (props) => {
     }
 
     if (userAnswer === correct_answer) {
-      correctAnswers.push({
-        question: props.questions[currentQuestion],
+      trueAnswers.push({
+        question: questions[currentQuestion],
         correctAnswer: correct_answer,
         userAnswer: userAnswer,
         questionNumber: currentQuestion + 1,
       });
     } else {
-      incorrectAnswers.push({
-        question: props.questions[currentQuestion],
+      falseAnswers.push({
+        question: questions[currentQuestion],
         correctAnswer: correct_answer,
         userAnswer: userAnswer,
         questionNumber: currentQuestion + 1,
       });
     }
-    if (currentQuestion < props.questions.length - 1) {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((curr) => curr + 1);
     } else {
       setGameIsOver(true);
@@ -65,9 +66,9 @@ const QuizScreen = (props) => {
   if (gameIsOver) {
     return (
       <GameOverScreen
-        correctAnswers={correctAnswers}
-        incorrectAnswers={incorrectAnswers}
-        questions={props.questions}
+        trueAnswers={trueAnswers}
+        falseAnswers={falseAnswers}
+        questions={questions}
       />
     );
   }
@@ -77,7 +78,7 @@ const QuizScreen = (props) => {
       {
         <h2 className={classes.title}>
           {currentQuestion + 1 + '. '}
-          {props.questions[currentQuestion].question}
+          {questions[currentQuestion].question}
         </h2>
       }
       <div className={classes['answers-container']}>
