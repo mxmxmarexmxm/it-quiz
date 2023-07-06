@@ -13,42 +13,44 @@ const GameOverScreen = (props) => {
       </h1>
 
       {incorrectAnswers.length !== 0 && (
-        <div>
-          <h1>Incorrect answers:</h1>
+        <div className={classes['answers-container']}>
+          <span className={classes['answers-title']}>Incorrect answers:</span>
           {incorrectAnswers.map((answer) => (
-            <div key={answer.question.id} className={classes.question}>
-              <h2>
+            <div
+              key={answer.question.id}
+              className={classes['question-container']}
+            >
+              <span className={classes['question-title']}>
                 {answer.questionNumber}. {answer.question.question}
-              </h2>
-              <h4>
-                {' '}
+              </span>
+              <span className={classes['question-answer']}>
                 Your answer: {answer.question.answers[answer.userAnswer]}
-              </h4>
-              <h4>
-                {' '}
+              </span>
+              <span className={classes['question-answer']}>
                 Correct answer: {answer.question.answers[answer.correctAnswer]}
-              </h4>
+              </span>
             </div>
           ))}
         </div>
       )}
 
       {correctAnswers.length !== 0 && (
-        <div>
-          <h1>Correct answers:</h1>
+        <div className={classes['answers-container']}>
+          <span className={classes['answers-title']}>Correct answers:</span>
           {correctAnswers.map((answer) => (
-            <div key={answer.question.id} className={classes.question}>
-              <h2>
+            <div
+              key={answer.question.id}
+              className={classes['question-container']}
+            >
+              <span className={classes['question-title']}>
                 {answer.questionNumber}. {answer.question.question}
-              </h2>
-              <h4>
-                {' '}
+              </span>
+              <span className={classes['question-answer']}>
                 Your answer: {answer.question.answers[answer.userAnswer]}
-              </h4>
-              <h4>
-                {' '}
+              </span>
+              <span className={classes['question-answer']}>
                 Correct answer: {answer.question.answers[answer.correctAnswer]}
-              </h4>
+              </span>
             </div>
           ))}
         </div>
