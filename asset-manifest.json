@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/it-quiz/static/css/main.ef502e39.css",
-    "main.js": "/it-quiz/static/js/main.3691d0c1.js",
+    "main.css": "/it-quiz/static/css/main.62c22a32.css",
+    "main.js": "/it-quiz/static/js/main.90fa6ab7.js",
     "static/media/binary7.jpg": "/it-quiz/static/media/binary7.1a4e52b137aab35d990f.jpg",
     "static/media/binary2.jpg": "/it-quiz/static/media/binary2.d198b37b49f29ff2141d.jpg",
     "static/media/binary.png": "/it-quiz/static/media/binary.3527ff30b3fa351c49f9.png",
@@ -10,13 +10,15 @@
     "static/media/binary5.jpg": "/it-quiz/static/media/binary5.3df47f0a485610bcc8f9.jpg",
     "static/media/background-icon.svg": "/it-quiz/static/media/background-icon.8feb9a8e733b8946914e68649fa434fe.svg",
     "index.html": "/it-quiz/index.html",
+    "static/media/false-icon.svg": "/it-quiz/static/media/false-icon.dd478b8857c02692901e19015b9abd92.svg",
     "static/media/back-icon.svg": "/it-quiz/static/media/back-icon.6e646842c3764f5c0720ec1ecc0c686b.svg",
+    "static/media/correct-icon.svg": "/it-quiz/static/media/correct-icon.fcd6e00df4c5f66b85638767460261ba.svg",
     "static/media/black-white-icon.svg": "/it-quiz/static/media/black-white-icon.5f338978bdff17b677a087f4f4b0bb7b.svg",
-    "main.ef502e39.css.map": "/it-quiz/static/css/main.ef502e39.css.map",
-    "main.3691d0c1.js.map": "/it-quiz/static/js/main.3691d0c1.js.map"
+    "main.62c22a32.css.map": "/it-quiz/static/css/main.62c22a32.css.map",
+    "main.90fa6ab7.js.map": "/it-quiz/static/js/main.90fa6ab7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef502e39.css",
-    "static/js/main.3691d0c1.js"
+    "static/css/main.62c22a32.css",
+    "static/js/main.90fa6ab7.js"
   ]
 }
