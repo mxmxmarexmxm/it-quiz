@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/it-quiz/static/css/main.78cfdae0.css",
-    "main.js": "/it-quiz/static/js/main.b226c3c8.js",
+    "main.css": "/it-quiz/static/css/main.ef502e39.css",
+    "main.js": "/it-quiz/static/js/main.3691d0c1.js",
     "static/media/binary7.jpg": "/it-quiz/static/media/binary7.1a4e52b137aab35d990f.jpg",
     "static/media/binary2.jpg": "/it-quiz/static/media/binary2.d198b37b49f29ff2141d.jpg",
     "static/media/binary.png": "/it-quiz/static/media/binary.3527ff30b3fa351c49f9.png",
@@ -12,11 +12,11 @@
     "index.html": "/it-quiz/index.html",
     "static/media/back-icon.svg": "/it-quiz/static/media/back-icon.6e646842c3764f5c0720ec1ecc0c686b.svg",
     "static/media/black-white-icon.svg": "/it-quiz/static/media/black-white-icon.5f338978bdff17b677a087f4f4b0bb7b.svg",
-    "main.78cfdae0.css.map": "/it-quiz/static/css/main.78cfdae0.css.map",
-    "main.b226c3c8.js.map": "/it-quiz/static/js/main.b226c3c8.js.map"
+    "main.ef502e39.css.map": "/it-quiz/static/css/main.ef502e39.css.map",
+    "main.3691d0c1.js.map": "/it-quiz/static/js/main.3691d0c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.78cfdae0.css",
-    "static/js/main.b226c3c8.js"
+    "static/css/main.ef502e39.css",
+    "static/js/main.3691d0c1.js"
   ]
 }
