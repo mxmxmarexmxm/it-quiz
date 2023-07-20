@@ -7,6 +7,7 @@ IT Quiz is a simple quiz application built with React and CSS Modules. It provid
 - Multiple-choice questions with options
 - Scoring and feedback for each question
 - Randomized question order for each quiz attempt
+- Users now customize the app's background image and apply a black and white filter with a blur effect for a personalized experience.
 
 ## Demo
 
